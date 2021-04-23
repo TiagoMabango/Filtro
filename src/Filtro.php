@@ -21,12 +21,15 @@ class Filtro
     /**
      * Special Characters filter.
      * 
-     * @param string $data
-     * @return null|string
+     * @param array $data
+     * @return null|array
      */
-    public static function filterSpecialChars(string $data): ?string
+    public static function filterSpecialChars(array $data): ?array
     {
-        $filtered_data = filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS); 
+        $filtered_data = [];
+        foreach($data as $key=>$value){
+            $filtered_data[$key]= is_null($value) ? null : filter_var($value,FILTER_SANITIZE_SPECIAL_CHARS); 
+        }
 
         return $filtered_data;
     }
