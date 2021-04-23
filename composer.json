@@ -1,0 +1,42 @@
+{
+    "name": "tiagomabango/filtro",
+    "description": "A package to simplify the filtering of inputs",
+    "type": "library",
+    "keywords": [
+        "lib",
+        "package",
+        "library"
+    ],
+    "support": {
+        "issues": "https://github.com/TiagoMabango/Filtro/issues",
+        "source": "https://github.com/TiagoMabango/Filtro"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TiagoMabango",
+            "email": "tiagomabango@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.4"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "psr-4": {
+            "Filtro\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Filtro\\": "tests/src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true
+}
